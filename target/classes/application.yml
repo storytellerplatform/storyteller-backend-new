@@ -1,0 +1,53 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+#   Railway
+    url: jdbc:postgresql://viaduct.proxy.rlwy.net:30134/railway
+    username: postgres
+    password: KrUXmzyUznszhOhlciOEOpiRBUbAKSnE
+
+#    Elephant
+#    url: jdbc:postgresql://rain.db.elephantsql.com:5432/xyqkxtii
+#    username: xyqkxtii
+#    password: U_l26Pyje9s4XZU1HwXSQ0e7StIWo2iP
+
+#    Render
+#    url: jdbc:postgresql://dpg-cns014kf7o1s73cpphkg-a:5432/storyteller_database_iutv
+#    username: storyteller_database_iutv_user
+#    password: K8zz0s9xe4Cuzqu7ueLsvKJBLCmQpKux
+
+#    Local
+#    url: jdbc:postgresql://localhost:5432/storyteller?charSet=utf8
+#    username: onandon
+#    password: asd112233
+
+  jpa:
+    hibernate:
+#      ddl-auto: 'none'
+      ddl-auto: 'create-drop'
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: s14737597@gmail.com
+    password: ifokvojvpjqmpkwr
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+config:
+  SERVER_LINK: 'https://storytellerbackend-latest.onrender.com'
