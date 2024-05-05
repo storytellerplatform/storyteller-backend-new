@@ -2,14 +2,14 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
 #   Railway
-    url: jdbc:postgresql://viaduct.proxy.rlwy.net:30134/railway
-    username: postgres
-    password: KrUXmzyUznszhOhlciOEOpiRBUbAKSnE
+#    url: jdbc:postgresql://viaduct.proxy.rlwy.net:30134/railway
+#    username: postgres
+#    password: KrUXmzyUznszhOhlciOEOpiRBUbAKSnE
 
 #    Elephant
-#    url: jdbc:postgresql://rain.db.elephantsql.com:5432/xyqkxtii
-#    username: xyqkxtii
-#    password: U_l26Pyje9s4XZU1HwXSQ0e7StIWo2iP
+    url: jdbc:postgresql://rain.db.elephantsql.com:5432/xyqkxtii
+    username: xyqkxtii
+    password: U_l26Pyje9s4XZU1HwXSQ0e7StIWo2iP
 
 #    Render
 #    url: jdbc:postgresql://dpg-cns014kf7o1s73cpphkg-a:5432/storyteller_database_iutv

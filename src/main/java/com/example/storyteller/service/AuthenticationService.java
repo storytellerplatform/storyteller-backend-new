@@ -8,9 +8,11 @@ import com.example.storyteller.entity.Role;
 import com.example.storyteller.entity.User;
 import com.example.storyteller.exception.CustomException;
 import com.example.storyteller.utils.EmailValidator;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,8 +28,6 @@ import java.util.regex.Pattern;
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
-
-
     private final UserService userService;
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
@@ -39,7 +39,7 @@ public class AuthenticationService {
     private final static String USER_EXISTS_MSG =  "使用者 %s 已註冊過";
 
     @Value("${config.SERVER_LINK}")
-    private static final String SERVER_LINK = "https://storytellerbackend-latest.onrender.com";
+    private static final String SERVER_LINK = "http://localhost:8080";
     private static final String EMAIL_LINK_TEMPLATE = "%s/api/v1/auth/confirm?token=%s";
 
     public boolean isValidPassword(String password) {

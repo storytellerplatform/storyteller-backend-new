@@ -97,8 +97,8 @@ public class SecurityConfig {
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 //        configuration.setAllowedOrigins(List.of(allowedOrigins));
-        configuration.setAllowedOrigins(List.of("https://storyteller-5kpj.onrender.com,http://localhost:3000,https://storyteller-one.vercel.app"));
-//        configuration.setAllowedOriginPatterns(List.of("http://localhost:3000,http://aazz282828-alps:3000,https://*.ngrok-free.app,https://*.onrender.com,https://storyteller-5kpj.onrender.com,https://*.vercel.app"));
+//        configuration.setAllowedOrigins(List.of("http://localhost:3000","https://storyteller-1.onrender.com/","https://storyteller-one.vercel.app"));
+        configuration.setAllowedOriginPatterns(List.of("http://localhost:3000","http://aazz282828-alps:3000","https://*.vercel.app","https://*.ngrok-free.app","https://*.onrender.com"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
 //        configuration.setAllowCredentials(true);
